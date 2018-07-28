@@ -9,10 +9,6 @@
     padding-bottom: 170px;
 }
 
-.section-lookbook {
-    padding-bottom: 800px;
-}
-
 .footer {
     background: #000;
     padding-top: 87px;
@@ -21,4 +17,9 @@
 
 .subfooter {
     background: #000;
+}
+
+.section-product {
+    flex-direction: column;
+    padding-bottom: 170px;
 }

@@ -1,0 +1,21 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    display: flex;
+}
+
+.grid-products {
+    margin-left: -33px;
+    margin-right: -33px;
+}
+
+.grid-products .grid-item {
+    width: calc(100% / 3);
+    justify-content: center;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-bottom: 66px;
+}

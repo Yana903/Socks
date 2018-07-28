@@ -34,24 +34,44 @@
 .layout-photo .layout-item {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 .layout-photo .layout-item:first-of-type {
     justify-content: flex-end;
 }
 
-.layout-photo .layout-item:nth-child(2), .layout-photo .layout-item:last-child {
-    padding-top: 100px;
+.layout-photo .layout-item:nth-child(2){
+    padding-right: 250px;
 }
 
-.layout-photo .layout-item{
-    position: relative;
+.layout-photo .layout-item:nth-child(2), .layout-photo .layout-item:last-child {
+    padding-top: 100px;
 }
 
 .layout-footer {
     align-items: center;
     justify-content: space-between;
 }
+
+.layout-product {
+    justify-content: center;
+}
+
+.layout-product .layout-item:first-child {
+    min-width: calc(100% / 4);
+}
+
+.layout-product .layout-item:last-child {
+    width: calc(100% / 4 * 3);
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.layout-single-product .layout-item {
+    width: calc(100% / 3);
+}
+
 
 
 
