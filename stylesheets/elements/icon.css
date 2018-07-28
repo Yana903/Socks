@@ -36,3 +36,8 @@ svg.icon-pinterest
   width: 25px;
   height: 25px;
 }
+
+
+.icon-group a svg:hover, .icon-group a svg:focus, .icon-group a svg:active {
+  fill: var(--global-muted-color) !important;
+}
