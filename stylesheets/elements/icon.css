@@ -37,7 +37,15 @@ svg.icon-pinterest
   height: 25px;
 }
 
-
 .icon-group a svg:hover, .icon-group a svg:focus, .icon-group a svg:active {
   fill: var(--global-muted-color) !important;
+}
+
+.cart-like-hover .icon-group svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-like-hover .icon-group svg:first-child {
+  margin-bottom: 30px;
 }

@@ -19,3 +19,15 @@
     padding-right: 33px;
     margin-bottom: 66px;
 }
+
+.section-like .grid-products {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.section-like  .grid-item {
+    width: calc(100% / 4);
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}

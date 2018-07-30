@@ -23,3 +23,15 @@
     flex-direction: column;
     padding-bottom: 170px;
 }
+
+.section-like {
+    padding-top: 150px;
+}
+
+.section-single-product {
+    padding-top: 50px;
+}
+
+.section-like {
+    padding-bottom: 185px;
+}

@@ -192,8 +192,8 @@ h4,
 h5,
 h6 {
     margin: 0 0 var(--base-heading-margin-top) 0;
-    font-family: var(--base-heading-font-family);
-    font-weight: var(--base-heading-font-weight);
+    font-family: 'PhagsPaBold';
+    /*font-weight: var(--base-heading-font-weight);*/
     color: var(--base-heading-color);
     text-transform: var(--base-heading-text-transform);
 }
@@ -291,7 +291,6 @@ input[type="submit"],
     user-select: none;
     border-radius: 0;
     overflow: visible;
-    font: inherit;
     text-transform: none;
     display: inline-flex;
     align-items: center;
@@ -390,6 +389,14 @@ button,
 select {
     text-transform: none;
 }
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*input[type="number"]:hover,*/
+/*input[type="number"]:focus {*/
+    /*-moz-appearance: number-input;*/
+/*}*/
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -445,8 +452,6 @@ select {
     max-width: 100%;
     margin: 0;
     outline: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     padding: var(--form-padding);
     min-height: var(--form-height);
     background: var(--form-background);
@@ -454,6 +459,24 @@ select {
     color: var(--form-color);
     box-shadow: 0 0 0 0 transparent inset;
     border-radius: 0;
+}
+
+input:not([type]),
+input[type=date],
+input[type=datetime-local],
+input[type=file],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type="month"],
+input[type=week],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 
@@ -478,7 +501,7 @@ input[type=date]:focus,
 input[type=datetime-local]:focus,
 input[type=email]:focus,
 input[type=file]:focus,
-input[type=number]:focus,
+/*input[type=number]:focus,*/
 input[type=password]:focus,
 input[type=search]:focus,
 input[type=tel]:focus,

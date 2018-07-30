@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -20,4 +20,12 @@
 }
 .container-expand {
   max-width: none
+}
+
+.container-like{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
 }
