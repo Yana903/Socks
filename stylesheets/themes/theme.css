@@ -48,7 +48,7 @@
 :root {
     --base-body-background:                          var(--global-background);
     --base-body-font-family:                         var(--global-font-family);
-    --base-body-font-weight:                         400;
+    /*--base-body-font-weight:                         400;*/
     --base-body-font-size:                           var(--global-font-size);
     --base-body-line-height:                         var(--global-line-height);
     --base-body-color:                               var(--global-color);
@@ -76,6 +76,56 @@
     --base-selection-background:                     #fff;
     --base-selection-color:                          var(--global-muted-color);
 }
+
+:root {
+    --table-color:                                   var(--global-color);
+    --table-background:                              var(--global-background);
+
+    --table-margin-vertical:                         var(--global-margin);
+
+    --table-cell-padding:                            20px 40px;
+
+    --table-divider-border-width:                    var(--global-border-width);
+    --table-divider-border:                          var(--global-border-width) solid var(--global-border);
+
+    --table-expand-min-width:                        150px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: var(--table-margin-vertical);
+    background: var(--table-background);
+    color: var(--table-color);
+}
+
+* + table {
+    margin-top: var(--table-margin-vertical)
+}
+
+table caption {
+    text-align: left;
+}
+
+table td,
+table th {
+    text-align: center;
+    border: var(--table-divider-border);
+    border-width: 0 0 var(--table-divider-border-width);
+    padding: var(--table-cell-padding);
+    vertical-align: center;
+}
+
+.table-shrink {
+    width: 1px;
+}
+
+.table-expand {
+    min-width: var(--table-expand-min-width);
+}
+
 
 
 *,
@@ -152,7 +202,7 @@ canvas,
 img,
 video {
     max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 
 svg:not(:root) {
@@ -265,7 +315,7 @@ textarea {
     --button-color: #fff;
     --button-background: #000;
     --button-font-family: 'PhagsPaBold';
-    --button-font-size: 26px;
+    --button-font-size: 24px;
     --button-padding: 6px 14px;
     --button-height: 65px;
 
@@ -339,7 +389,7 @@ input[type="submit"],
 :root {
     --form-height:                                   var(--global-control-height);
     --form-line-height:                              9px;
-    --form-padding:                                  6px 14px;
+    --form-padding:                                  6px;
 
     --form-background:                               #fff;
     --form-color:                                    var(--global-color);
@@ -431,6 +481,7 @@ fieldset {
 }
 
 input:not([type]),
+input[type=email],
 input[type=date],
 input[type=datetime-local],
 input[type=file],
@@ -456,10 +507,30 @@ select {
     min-height: var(--form-height);
     background: var(--form-background);
     border: none;
+    border-bottom: 1px solid #000;
     color: var(--form-color);
     box-shadow: 0 0 0 0 transparent inset;
-    border-radius: 0;
+    margin-top: 70px;
+    cursor: pointer;
 }
+
+
+input:not([type]):hover,
+input:not([type]):focus,
+input[type=email]:hover,
+input[type=email]:focus,
+input[type=date]:hover,
+input[type=date]:focus,
+input[type=number]:hover,
+input[type=number]:focus,
+input[type=tel]:hover,
+input[type=tel]:focus,
+input[type=text]:hover,
+input[type=text]:focus {
+    border-bottom: 1px solid var(--global-muted-color);
+}
+
+
 
 input:not([type]),
 input[type=date],
@@ -480,17 +551,6 @@ select {
 }
 
 
-input[type="email"] {
-    background: #000;
-    border: none;
-    color: #fff;
-}
-
-input[type="email"]::placeholder {
-    color: #fff;
-}
-
-
 ::placeholder {
     color: var(--form-placeholder-color);
     opacity: 1;
@@ -499,7 +559,6 @@ input[type="email"]::placeholder {
 input:not([type]):focus,
 input[type=date]:focus,
 input[type=datetime-local]:focus,
-input[type=email]:focus,
 input[type=file]:focus,
 /*input[type=number]:focus,*/
 input[type=password]:focus,
@@ -537,13 +596,6 @@ select:disabled {
     background: var(--form-disabled-background);
     color: var(--form-disabled-color);
 }
-
-/*select:not([multiple]):not([size]) {*/
-    /*padding-right: var(--form-select-padding-right);*/
-    /*background-image: var(--internal-form-select-image);*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: 100% 50%*/
-/*}*/
 
 select:not([multiple]):not([size])::-ms-expand {
     display: none
